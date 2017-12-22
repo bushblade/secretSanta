@@ -92,11 +92,12 @@ function resetAll() {
 }
 
 function writeSantaList() {
-  for (var i = 0; i < people.length; i++) {
+  for (var i = 0; i < santas.length; i++) {
     var createLi = document.createElement("li");
+    createLi.className = 'animated flipInY';
     santaList.appendChild(createLi);
     santaList.lastChild.innerHTML = '<strong>' + santas[i] + '</strong> is Santa for <strong>' + recipients[i] + '</strong>';
-    santaList.lastChild.classList.add("animated", "flipInY");
+    // santaList.lastChild.classList.add("animated", "flipInY");
   }
 }
 
